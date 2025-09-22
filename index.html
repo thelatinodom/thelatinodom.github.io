@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dominic Luthje</title>
+  <meta name="author" content="Dominic Luthje">
+  <meta name="date" content="2025-09-22">
+  <meta name="description" content="Personal homepage for Dominic Luthje, oboist and researcher.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background: #f0f7ff;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+      color: white;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+
+    header h2 {
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 1.2em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #222;
+      padding: 15px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    nav a {
+      color: #ffd93d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin: 40px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #ff6b6b;
+      margin-bottom: 15px;
+    }
+
+    iframe {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #222;
+      color: #ffd93d;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background: #111;
+      color: #eee;
+    }
+    .dark-mode section {
+      background: #222;
+      color: #eee;
+    }
+    .dark-mode nav {
+      background: #111;
+    }
+    .dark-mode footer {
+      background: #111;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      border: none;
+      background: #ff6b6b;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .dark-toggle:hover {
+      background: #e63946;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <header>
+    <h1>Dominic Luthje</h1>
+    <h2>Student • Researcher • Oboist</h2>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#concerts">Concerts</a>
+    <a href="#recordings">Recordings</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
+<section>
+ 
+ <center><p><img src="data:image/jpeg;base64,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" alt="A picture of Dominic Luthje holding an oboe"></p></center> 
+  
+</section>
+
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Dominic Luthje is a passionate oboist pursuing performance opportunities in orchestras, chamber ensembles, and festivals. He has performed as principal oboist with the UK Wind Symphony and Symphony Orchestra, and studies with Dr. ToniMarie Marchioni and Tamara Winston. As a Linguistics Major at the University of Kentucky, he is passionate about pursuing research and furthering his understanding of the different areas of study found within Linguistics.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>University of Kentucky — Bachelor’s in Music Performance and Linguistics</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>•Dominic has been intentional about researching connections between linguistics and music, while actively performing in orchestral, chamber, and solo settings.</p>
+      <p>•Dominic has conducted Research pertinent to Address Terms and their function in the Spanish language.</p>
+      <p>•Dominic is currently in the process of applying to graduate schools with the objective of obtaining a Master's Degree in Orchestral Music Performnace.</p>
+      
+        <p>
+    •Visit <a href="https://github.com/thelatinodom" target="_blank">My GitHub</a>.  
+  </p>
+  
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <p>When not practicing or performing, Dominic enjoys exploring languages, reading, and discovering new music.</p>
+    </section>
+
+    <section id="concerts">
+      <h2>Upcoming Concerts</h2>
+      <ul>
+        <li><strong>Sep 26 , 2026</strong> – UK Symphony Orchestra, Singletary Center (Dvorak  8 and Brahms Academic Festival Overture)</li>
+        <li><strong>Oct 5, 2026</strong> – UK Opera Theater, Lexington Opera House (Hansel and Gretel, Humperdinck)</li>
+      </ul>
+    </section>
+
+    <section id="recordings">
+  <h2>Recordings</h2>
+  <p>Selections from recitals, chamber music, and festival performances:</p>
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/t9uoUGEFtVg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+  </iframe>
+</section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email(s): <a href="mailto:luthjed@gmail.com">luthjed@gmail.com</a></p>
+      
+      <a href="mailto:dalu224@uky.edu">dalu224@uky.edu</a>
+      
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dominic Luthje · All Rights Reserved
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
