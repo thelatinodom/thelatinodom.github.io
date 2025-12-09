@@ -2,64 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Dominic Luthje - LIN 301 Project</title>
+  <title>Dominic Luthje – Project</title>
   <meta name="author" content="Dominic Luthje">
+  <meta name="date" content="2025-12-09">
+  <meta name="description" content="Project page for Dominic Luthje: Dominican vs Mexican Spanish">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    /* Paste all your existing CSS from index.html here */
-    body { margin: 0; font-family: "Helvetica Neue", Arial, sans-serif; line-height: 1.6; background: #f0f7ff; color: #222; }
-    header { text-align: center; padding: 50px 20px 30px; background: linear-gradient(135deg, #ff6b6b, #ffd93d); color: white; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; }
-    header h1 { margin: 0; font-size: 2.8em; }
-    header h2 { margin-top: 10px; font-weight: 300; font-size: 1.2em; }
-    nav { display: flex; justify-content: center; gap: 25px; background: #222; padding: 15px; border-radius: 0 0 20px 20px; }
-    nav a { color: #ffd93d; text-decoration: none; font-weight: bold; font-size: 1.05em; }
-    nav a:hover { color: #ff6b6b; }
-    main { max-width: 900px; margin: auto; padding: 20px; }
-    section { margin: 40px 0; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    section h2 { color: #ff6b6b; margin-bottom: 15px; }
-    footer { text-align: center; padding: 20px; margin-top: 40px; background: #222; color: #ffd93d; border-top-left-radius: 20px; border-top-right-radius: 20px; }
-    .dark-mode { background: #111; color: #eee; }
-    .dark-mode section { background: #222; color: #eee; }
-    .dark-mode nav { background: #111; }
-    .dark-mode footer { background: #111; }
-    .dark-toggle { position: fixed; top: 20px; right: 20px; padding: 8px 12px; border: none; background: #ff6b6b; color: white; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    .dark-toggle:hover { background: #e63946; }
+    html {
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background: #f0f7ff;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+      color: white;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+
+    header h2 {
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 1.2em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #222;
+      padding: 15px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    nav a {
+      color: #ffd93d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin: 40px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #ff6b6b;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #222;
+      color: #ffd93d;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background: #111;
+      color: #eee;
+    }
+    .dark-mode section {
+      background: #222;
+      color: #eee;
+    }
+    .dark-mode nav {
+      background: #111;
+    }
+    .dark-mode footer {
+      background: #111;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      border: none;
+      background: #ff6b6b;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .dark-toggle:hover {
+      background: #e63946;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Dark Mode Toggle -->
   <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
   <header>
     <h1>Dominic Luthje</h1>
-    <h2>LIN 301 Final Project</h2>
+    <h2>Project: Dominican vs Mexican Spanish</h2>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="dom_final_project.html">LIN 301 Project</a>
+    <a href="#overview">Overview</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#results">Results & Interpretation</a>
   </nav>
 
   <main>
     <section id="overview">
       <h2>Overview</h2>
-      <p>Short description of the project, your goals, and why you conducted it...</p>
+      <p>Dominic Luthje: The Dialectal and Pronominal Differences and Similarities Between Dominican and Mexican Spanish.</p>
+      <p>This project continues the work I began in last semester’s capstone course with Drs. Jennifer Cramer and Rust Barrett, exploring Spanish address terms and their use across dialects, regions, and countries in Latin America.</p>
+      <p>I also expanded on existing research suggesting a link between sexuality and the use of address terms, particularly the pronoun tú and its social implications among men in countries like Costa Rica and Colombia.</p>
+      <p>For this project, I focused on Mexican and Dominican Spanish, analyzing large corpora of Reddit posts from various subreddits containing users writing in each dialect. My main objective was to examine overt pronoun usage, hypothesizing that Dominican Spanish would show higher rates of pronouns like tú, yo, and usted.</p>
+      <p>The website is structured into four main sections for this project: Overview, Dataset, Methodology, and Results & Interpretation.</p>
     </section>
 
     <section id="dataset">
       <h2>Dataset</h2>
-      <p>Explain what data you collected, where it comes from, and how you prepared it...</p>
+      <p>[Content goes here]</p>
     </section>
 
     <section id="methodology">
       <h2>Methodology</h2>
-      <p>Describe your coding, counting, or analysis methods...</p>
+      <p>[Content goes here]</p>
     </section>
 
     <section id="results">
       <h2>Results & Interpretation</h2>
-      <p>Include key findings, charts/visualizations, and what you interpret from the data...</p>
+      <p>[Content goes here]</p>
     </section>
   </main>
 
@@ -68,8 +171,11 @@
   </footer>
 
   <script>
-    function toggleDarkMode() { document.body.classList.toggle("dark-mode"); }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
