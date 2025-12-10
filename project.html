@@ -176,8 +176,10 @@
     </section>
 
     <section id="methods">
-      <h2>Methods</h2>
+      <h2>Methodology</h2>
       <p>Reddit Scraping With PRAW: After formulating a plan with clear objectives. My next step was to actually gather the data. Inside R Studio, I set up PRAW, a Python “vessel” for the Reddit API that I created. PRAW is basically a medium that enabled me to communicate with Reddit through my code, and it is incredibly powerful!</p>
+      <img src="PRAW code block.png" alt="Code block that shows the process into fetching different Reddit posts from within R Studio/Python" width="500">
+
       <p>The API applications that I had initially set up gave me the permission I needed to request posts from eligible subreddits.</p>
       <p>For Dominican Spanish, I pulled posts from: r/Dominican, r/DominicanRepublic, r/Quisqueya, and r/AskLatinAmerica.</p>
       <p>I used the langdetect function to determine if a post was written in Spanish.</p>
@@ -185,6 +187,12 @@
       <p>I then filled in empty text fields so the rest of the code would not break. The Post title and columns were also combined into one text column. Lowercasing all text. Saving the cleaned data to a csv file.</p>
       <p>After gathering and cleaning the posts, I used a simple function to verify if there were common words to each dialect in the .csv file.</p>
       <p>Insensitive vowels: building a regex pattern that looks for the “slang words” with and without accents.</p>
+
+      <img src="Vowel insensitive code block .png" alt="Code that shows how a word can be spelled differently and the method I usted to make sure every iteration of the word was considered in my data." width="500">
+
+      <img src="Loop code block.png" alt="Code that shows that I wanted to filter out any text from the reddit posts that was not in Spanish" width="500">
+
+      
     </section>
 
     <section id="results">
@@ -203,6 +211,10 @@
       Tu: 48<br>
       Yo: 122<br>
       Usted: 2</p>
+
+<img src="Pronoun usage total .png" alt="Bar graph showing the distribution of pronouns in both datasets" width="500">
+
+      
       
       <p>I wrote code that would calculate how many times a pronoun was used per 1,000 words.<br>
       Dominican Spanish yielded the following rates:<br>
@@ -210,6 +222,12 @@
       Tu: 3.10 uses per 1,000 words<br>
       Yo: 2.94 uses per 1,000 words<br>
       Usted: 0.26 uses per 1,000 words</p>
+
+<img src="Mexprowords" alt="Bar graph showing pronoun rates per 1,000 words.  " width="500">
+
+
+
+      
     </section>
 
     <section id="data">
@@ -218,6 +236,17 @@
       <p>These patterns reflect stylistic and dialectal differences. Dominican Spanish presents overt pronouns, even in casual writing, which makes the language feel more direct and personal. Mexican Spanish relies less on tu overall, most likely because informal conversation online and in person often drops the pronoun when it’s clear from context. Translation or spelling choices, regional slang, and how people write casually online also influence differences.</p>
     </section>
 
+<img src="Mexpiechart" alt="Pie chart of Mexican slang words" width="500">
+
+<img src="Domislangpiechart" alt="Pie chart of Dominican slang words" width="500">
+
+<img src="Slang Distribution.Domi.png" alt="Code block output of Domi slang words" width="500">
+
+<img src="Slang Distribution.mex.png" alt="Code block output of Mex slang words" width="500">
+
+
+
+    
     <section id="next-steps">
       <h2>Next Steps</h2>
       <p>I would like to expand the corpora to include more posts from different forums and regions to see if these patterns remain. It would also be interesting to analyze pronoun usage in different genres, like news comments versus casual discussion, or to compare pronoun usage by user age or gender if that data were available.</p>
