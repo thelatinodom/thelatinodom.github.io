@@ -162,13 +162,12 @@
       <p>Additionally, I built upon existing (but minimal) research that suggests a link between sexuality and the use of address terms, most particularly Tu and its use among men in countries like Costa Rica and Colombia.</p>
       <p>So, in this project, with the help of Dr. Barrett, I was able to narrow down what exactly I wanted to do. This time, I decided to focus closely on both Mexican and Dominican Spanish, and analyzed large corpuses of text made up of Reddit posts from different Reddit forums that contained users who speak/write in the respective dialects.</p>
       <p>The main point I wanted to focus on is the overt pronoun usage in Dominican Spanish, and I hypothesized that in both corpuses I would analyze, Dominican Spanish would have a higher level of pronoun usage “tu, yo, usted”.</p>
-      <p>Outline of the site:</p>
     </section>
 
     <section id="dataset">
       <h2>Dataset</h2>
       <p>Though it took some trial and error, I decided to use Reddit posts as my main source of analysis for this project. Reddit offered large amounts of naturally occurring language, and the posts reflected a wide range of informal, everyday Spanish. The Dominican subreddit in particular contained a mix of Spanish, Spanglish, and occasional English, while the Mexican subreddit posts were almost entirely in Spanish. I initially considered collecting tweets from Twitter/X, but access to the platform’s API requires paid tiers, which made it impractical for this project. Thanks, Elon Musk!</p>
-      <p>API: application programming interface- basically gives researchers the “keys” to different forums and subreddits that they can use to request data and use in an approved way. I kind of think of it like EbscoHOST or Infokat in a way.</p>
+      <p>API: Application Programming Interfacebasically gives researchers the “keys” to different forums and subreddits that they can use to request data and use in an approved way. Think of it like EbscoHOST or Infokat in a way.</p>
       <p>As with most data, the posts had varying lengths, writing styles, and structures, which required some maneuvering on my part. The posts often contained inconsistent spelling, emojis, hyperlinks, and usernames, as well as code switching between languages, leading me to pre-clean so that the standard cleaning process could go more smoothly. This preliminary cleaning included removing empty text fields, lowercasing all text for consistency, and removing duplicate posts.</p>
       <p>The biggest problem was the sizes of the corpora that I was getting from PRAW, they were too small for my purposes and I had to constantly tweak the code (with the help of Chat GPT) to get me the results I wanted. A larger data set that would give me viable results.</p>
     </section>
@@ -193,18 +192,21 @@
       Mexican Corpus: 81,308</p>
       <p>Total Number of Pronouns:<br>
       Dominican Spanish<br>
-      tu: 519<br>
-      yo: 493<br>
-      usted: 44<br>
+      Tu: 519<br>
+      Yo: 493<br>
+      Usted: 44<br>
+        
       Mexican Spanish<br>
-      tu: 48<br>
-      yo: 122<br>
-      usted: 2</p>
+      Tu: 48<br>
+      Yo: 122<br>
+      Usted: 2</p>
+      
       <p>I wrote code that would calculate how many times a pronoun was used per 1,000 words.<br>
       Dominican Spanish yielded the following rates:<br>
-      tú: 3.10 uses per 1,000 words<br>
-      yo: 2.94 uses per 1,000 words<br>
-      usted: 0.26 uses per 1,000 words</p>
+        
+      Tu: 3.10 uses per 1,000 words<br>
+      Yo: 2.94 uses per 1,000 words<br>
+      Usted: 0.26 uses per 1,000 words</p>
     </section>
 
     <section id="data">
