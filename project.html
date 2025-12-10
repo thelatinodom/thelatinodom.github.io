@@ -149,7 +149,7 @@
   <nav>
     <a href="#overview">Home/Overview</a>
     <a href="#dataset">Dataset</a>
-    <a href="#methods">Methods</a>
+    <a href="#methodology">Methodology</a>
     <a href="#results">Results</a>
     <a href="#data">Data</a>
     <a href="#next-steps">Next Steps</a>
@@ -169,6 +169,9 @@
       <p>Though it took some trial and error, I decided to use Reddit posts as my main source of analysis for this project. Reddit offered large amounts of naturally occurring language, and the posts reflected a wide range of informal, everyday Spanish. The Dominican subreddit in particular contained a mix of Spanish, Spanglish, and occasional English, while the Mexican subreddit posts were almost entirely in Spanish. I initially considered collecting tweets from Twitter/X, but access to the platform’s API requires paid tiers, which made it impractical for this project. Thanks, Elon Musk!</p>
       <p>API: Application Programming Interfacebasically gives researchers the “keys” to different forums and subreddits that they can use to request data and use in an approved way. Think of it like EbscoHOST or Infokat in a way.</p>
       <p>As with most data, the posts had varying lengths, writing styles, and structures, which required some maneuvering on my part. The posts often contained inconsistent spelling, emojis, hyperlinks, and usernames, as well as code switching between languages, leading me to pre-clean so that the standard cleaning process could go more smoothly. This preliminary cleaning included removing empty text fields, lowercasing all text for consistency, and removing duplicate posts.</p>
+      
+      <img src="apisetup" alt="A screenshot of the API Setup process done on Reddit." width="500">
+      
       <p>The biggest problem was the sizes of the corpora that I was getting from PRAW, they were too small for my purposes and I had to constantly tweak the code (with the help of Chat GPT) to get me the results I wanted. A larger data set that would give me viable results.</p>
     </section>
 
