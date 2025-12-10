@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Dominic Luthje: Linguistics Projects</title>
+  <title>Dominic Luthje: The Dialectal and Pronominal differences and similarities between Dominican and Mexican Spanish</title>
   <meta name="author" content="Dominic Luthje">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -38,6 +38,7 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 25px;
       background: #222;
@@ -65,8 +66,8 @@
     section {
       margin: 40px 0;
       padding: 25px;
-      background: #fff7e6; /* subtle orange tint for project sections */
-      border-left: 6px solid #ff6b6b; /* eye-catching accent */
+      background: #fff7e6;
+      border-left: 6px solid #ff6b6b;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -88,16 +89,6 @@
 
     section ul {
       padding-left: 20px;
-    }
-
-    a.project-link {
-      color: #ff6b6b;
-      font-weight: bold;
-    }
-
-    a.project-link:hover {
-      color: #ffd93d;
-      text-decoration: underline;
     }
 
     footer {
@@ -151,49 +142,80 @@
   <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
   <header>
-    <h1>Dominic Luthje</h1>
-    <h2>Research & Linguistics Projects</h2>
+    <h1>Dominic Luthje: The Dialectal and Pronominal differences and similarities between Dominican and Mexican Spanish</h1>
+    <h2>Final Project</h2>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="#methodology">Methodology</a>
-    <a href="#data-analysis">Data Analysis</a>
+    <a href="#overview">Home/Overview</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#methods">Methods</a>
     <a href="#results">Results</a>
-    <a href="#interpretation">Interpretation</a>
+    <a href="#data">Data</a>
     <a href="#next-steps">Next Steps</a>
   </nav>
 
   <main>
-    <section id="methodology">
-      <h2>Methodology</h2>
-      <p>This project compares Dominican and Mexican Spanish through analysis of Reddit posts, focusing on pronoun usage, slang, and other linguistic features. Data was collected, cleaned, and visualized to uncover patterns across the two dialects.</p>
+    <section id="overview">
+      <h2>Home/Overview</h2>
+      <p>This final project serves as a continuation of my work in last semester’s capstone course, where I worked closely with Drs. Jennifer Cramer and Rust Barrett to explore the different address terms in the Spanish language and how they are used differently according to dialect, city, region, and countries of Latin America.</p>
+      <p>Additionally, I built upon existing (but minimal) research that suggests a link between sexuality and the use of address terms, most particularly Tu and its use among men in countries like Costa Rica and Colombia.</p>
+      <p>So, in this project, with the help of Dr. Barrett, I was able to narrow down what exactly I wanted to do. This time, I decided to focus closely on both Mexican and Dominican Spanish, and analyzed large corpuses of text made up of Reddit posts from different Reddit forums that contained users who speak/write in the respective dialects.</p>
+      <p>The main point I wanted to focus on is the overt pronoun usage in Dominican Spanish, and I hypothesized that in both corpuses I would analyze, Dominican Spanish would have a higher level of pronoun usage “tu, yo, usted”.</p>
+      <p>Outline of the site:</p>
     </section>
 
-    <section id="data-analysis">
-      <h2>Data Analysis</h2>
-      <p>Using Python, we processed the text to count occurrences of key pronouns and slang terms. Charts were generated to compare frequencies and patterns between Dominican and Mexican Spanish.</p>
-      <p>Example visualizations include side-by-side bar charts, pie charts of slang usage, and pronoun distribution comparisons.</p>
+    <section id="dataset">
+      <h2>Dataset</h2>
+      <p>Though it took some trial and error, I decided to use Reddit posts as my main source of analysis for this project. Reddit offered large amounts of naturally occurring language, and the posts reflected a wide range of informal, everyday Spanish. The Dominican subreddit in particular contained a mix of Spanish, Spanglish, and occasional English, while the Mexican subreddit posts were almost entirely in Spanish. I initially considered collecting tweets from Twitter/X, but access to the platform’s API requires paid tiers, which made it impractical for this project. Thanks, Elon Musk!</p>
+      <p>API: application programming interface- basically gives researchers the “keys” to different forums and subreddits that they can use to request data and use in an approved way. I kind of think of it like EbscoHOST or Infokat in a way.</p>
+      <p>As with most data, the posts had varying lengths, writing styles, and structures, which required some maneuvering on my part. The posts often contained inconsistent spelling, emojis, hyperlinks, and usernames, as well as code switching between languages, leading me to pre-clean so that the standard cleaning process could go more smoothly. This preliminary cleaning included removing empty text fields, lowercasing all text for consistency, and removing duplicate posts.</p>
+      <p>The biggest problem was the sizes of the corpora that I was getting from PRAW, they were too small for my purposes and I had to constantly tweak the code (with the help of Chat GPT) to get me the results I wanted. A larger data set that would give me viable results.</p>
+    </section>
+
+    <section id="methods">
+      <h2>Methods</h2>
+      <p>Reddit Scraping With PRAW: After formulating a plan with clear objectives. My next step was to actually gather the data. Inside R Studio, I set up PRAW, a Python “vessel” for the Reddit API that I created. PRAW is basically a medium that enabled me to communicate with Reddit through my code, and it is incredibly powerful!</p>
+      <p>The API applications that I had initially set up gave me the permission I needed to request posts from eligible subreddits.</p>
+      <p>For Dominican Spanish, I pulled posts from: r/Dominican, r/DominicanRepublic, r/Quisqueya, and r/AskLatinAmerica.</p>
+      <p>I used the langdetect function to determine if a post was written in Spanish.</p>
+      <p>Organizing and Cleaning the data with Pandas: After the pulling process was complete, I loaded all the data into a dataframe, which served as a sort of “spreadsheet” tool where all the data would be easily visible. I figured this would be the best way to approach the cleaning.</p>
+      <p>I then filled in empty text fields so the rest of the code would not break. The Post title and columns were also combined into one text column. Lowercasing all text. Saving the cleaned data to a csv file.</p>
+      <p>After gathering and cleaning the posts, I used a simple function to verify if there were common words to each dialect in the .csv file.</p>
+      <p>Insensitive vowels: building a regex pattern that looks for the “slang words” with and without accents.</p>
     </section>
 
     <section id="results">
       <h2>Results</h2>
-      <p>The analysis shows noticeable differences in pronoun usage, with Dominican Spanish favoring more overt pronouns. Certain slang terms are more prevalent in each dialect, reflecting regional and stylistic variations.</p>
+      <p>As I hypothesized, pronouns appeared much more frequently in the Dominican corpus than in the Mexican corpus.</p>
+      <p>Total Words:<br>
+      Dominican Corpus: 83,771<br>
+      Mexican Corpus: 81,308</p>
+      <p>Total Number of Pronouns:<br>
+      Dominican Spanish<br>
+      tu: 519<br>
+      yo: 493<br>
+      usted: 44<br>
+      Mexican Spanish<br>
+      tu: 48<br>
+      yo: 122<br>
+      usted: 2</p>
+      <p>I wrote code that would calculate how many times a pronoun was used per 1,000 words.<br>
+      Dominican Spanish yielded the following rates:<br>
+      tú: 3.10 uses per 1,000 words<br>
+      yo: 2.94 uses per 1,000 words<br>
+      usted: 0.26 uses per 1,000 words</p>
     </section>
 
-    <section id="interpretation">
-      <h2>Interpretation</h2>
-      <p>These patterns likely emerge from a combination of:</p>
-      <ul>
-        <li>Dialectal conventions and social norms</li>
-        <li>Translation or transcription choices in Reddit posts</li>
-        <li>Stylistic differences among users</li>
-      </ul>
+    <section id="data">
+      <h2>Data</h2>
+      <p>The bar chart shows a clear difference in pronoun usage between Dominican and Mexican Spanish. In Dominican Spanish, tú and yo are used frequently, with tu slightly higher than yo, while usted is rare. In Mexican Spanish, yo is more common than tu, and usted is almost never used (in this context).</p>
+      <p>These patterns reflect stylistic and dialectal differences. Dominican Spanish presents overt pronouns, even in casual writing, which makes the language feel more direct and personal. Mexican Spanish relies less on tu overall, most likely because informal conversation online and in person often drops the pronoun when it’s clear from context. Translation or spelling choices, regional slang, and how people write casually online also influence differences.</p>
     </section>
 
     <section id="next-steps">
       <h2>Next Steps</h2>
-      <p>Future work could include a deeper exploration of gendered pronoun usage, slang evolution, and extending the dataset to include additional Latin American dialects. Visualizations can be made interactive for web display.</p>
+      <p>I would like to expand the corpora to include more posts from different forums and regions to see if these patterns remain. It would also be interesting to analyze pronoun usage in different genres, like news comments versus casual discussion, or to compare pronoun usage by user age or gender if that data were available.</p>
     </section>
   </main>
 
@@ -209,5 +231,6 @@
   </script>
 </body>
 </html>
+
 
 
