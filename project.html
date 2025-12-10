@@ -1,30 +1,82 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Page</title>
+    <title>Dominic Luthje: Dominican vs Mexican Spanish</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>My Project</h1>
+        <h1>Dominic Luthje: The Dialectal and Pronominal Differences and Similarities between Dominican and Mexican Spanish</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="project.html">Project</a>
         </nav>
     </header>
 
-    
     <main>
-        
-        <p>This is a test paragraph to make sure the page works.</p>
-        
+        <!-- Home / Overview -->
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>This final project serves as a continuation of my work in last semester’s capstone course, where I worked closely with Drs. Jennifer Cramer and Rust Barrett to explore the different address terms in the Spanish language and how they are used differently according to dialect, city, region, and countries of Latin America.</p>
+            <p>Additionally, I built upon existing research suggesting a link between sexuality and the use of address terms, particularly <em>tú</em> and its use among men in countries like Costa Rica and Colombia.</p>
+            <p>In this project, I focused on both Mexican and Dominican Spanish, analyzing large corpora of Reddit posts from different forums. The main point of interest was the overt pronoun usage in Dominican Spanish. I hypothesized that Dominican Spanish would have a higher frequency of pronouns like <em>tú</em>, <em>yo</em>, and <em>usted</em> than Mexican Spanish.</p>
+        </section>
+
+        <!-- Dataset -->
+        <section id="dataset">
+            <h2>Dataset</h2>
+            <p>Reddit posts were the main source of analysis because they provide large amounts of naturally occurring informal Spanish. Dominican subreddit posts often contained a mix of Spanish, Spanglish, and occasional English, while Mexican posts were almost entirely in Spanish. Twitter was considered but its API access requires paid tiers.</p>
+            <p>Pre-cleaning involved removing empty fields, lowercasing text, removing duplicates, and addressing spelling inconsistencies, emojis, hyperlinks, and code-switching.</p>
+            <p>Subreddits used for Dominican Spanish: <em>r/Dominican</em>, <em>r/DominicanRepublic</em>, <em>r/Quisqueya</em>, and <em>r/AskLatinAmerica</em>. The <code>langdetect</code> function was used to filter for Spanish posts.</p>
+        </section>
+
+        <!-- Methods -->
+        <section id="methods">
+            <h2>Methods</h2>
+            <h3>Reddit Scraping with PRAW</h3>
+            <p>PRAW (Python Reddit API Wrapper) allowed me to request posts from eligible subreddits. API keys granted the permissions needed to access Reddit data.</p>
+
+            <h3>Organizing and Cleaning with Pandas</h3>
+            <p>Data were loaded into a dataframe to manage posts like a spreadsheet. Cleaning steps included filling empty text fields, combining columns, lowercasing, and saving cleaned data to CSV. Regex patterns were used to detect slang words with or without accents.</p>
+        </section>
+
+        <!-- Results -->
+        <section id="results">
+            <h2>Results</h2>
+            <p>As hypothesized, pronouns appeared much more frequently in the Dominican corpus than in the Mexican corpus.</p>
+
+            <h3>Corpus Sizes</h3>
+            <ul>
+                <li>Dominican Corpus: 83,771 words</li>
+                <li>Mexican Corpus: 81,308 words</li>
+            </ul>
+
+            <h3>Pronouns Counts</h3>
+            <ul>
+                <li><strong>Dominican Spanish</strong>: tú: 519, yo: 493, usted: 44</li>
+                <li><strong>Mexican Spanish</strong>: tú: 48, yo: 122, usted: 2</li>
+            </ul>
+
+            <h3>Pronoun Rates (per 1,000 words)</h3>
+            <ul>
+                <li>Dominican Spanish: tú 3.10, yo 2.94, usted 0.26</li>
+            </ul>
+
+            <p>The bar chart shows a clear difference in pronoun usage between Dominican and Mexican Spanish. Dominican Spanish uses <em>tú</em> and <em>yo</em> frequently, while <em>usted</em> is rare. Mexican Spanish uses <em>yo</em> more than <em>tú</em>, and <em>usted</em> is almost never used. These patterns reflect stylistic and dialectal differences.</p>
+        </section>
+
+        <!-- Next Steps -->
+        <section id="next-steps">
+            <h2>Next Steps</h2>
+            <p>I plan to expand the corpora to include more posts from different forums and regions. It would also be interesting to analyze pronoun usage in different genres, like news comments versus casual discussion, or compare usage by user age or gender if that data becomes available.</p>
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 My Website</p>
+        <p>© 2025 Dominic Luthje</p>
     </footer>
 </body>
 </html>
-
